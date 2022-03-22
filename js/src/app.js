@@ -1,115 +1,19 @@
 import * as THREE from 'three';
-import { GLTFLoader } from '../../jsm/loaders/GLTFLoader.js';
-import { DRACOLoader } from '../../jsm/loaders/DRACOLoader.js';
-import { OrbitControls } from '../../jsm/controls/OrbitControls.js';
-import Stats from '../../jsm/libs/stats.module.js';
 
+import { scene, camera } from './env/enviroment.js';
 
+import { Cranium } from './objects/cranium.js';
+import { Stars } from './objects/stars.js';
 
-let scene = new THREE.Scene();
-scene.background = new THREE.Color( 0xf1f1f1 );
-scene.fog = new THREE.FogExp2( 0xf1f1f1, 0.00000025 );
-
-let camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 0.1, 1e7 );
-camera.position.set( 0.5, 0.5, 2 );
-
-const light = new THREE.AmbientLight( 0xffffff ); // soft white light
-scene.add( light );
-
-let dirLight = new THREE.DirectionalLight( 0xffffff );
-dirLight.position.set( - 1, 0, 1 ).normalize();
-scene.add( dirLight );
-
-let controls = new OrbitControls( camera, document.body );
-controls.target.set( 0, 0, 0 );
-controls.update();
-
-
-const dracoLoader = new DRACOLoader();
-
-const cranium = new GLTFLoader();
-cranium.setDRACOLoader( dracoLoader );
-
-cranium.load( 'model/face.glb', ( glb ) => {
-    const cramiumModel = glb.scene;
-    scene.add( cramiumModel );
-} );
-
-
-//stars
-const radius = 6371;
-
-let colorStars1 = 0x000000;//0x555555;
-let colorStars2 = 0x000000;//0x555555;
-let colorStars3 = 0x000000;//0x333333;
-let colorStars4 = 0x000000;//0x3a3a3a;
-let colorStars5 = 0x000000;//0x1a1a1a;
-let colorStars6 = 0x000000;//0x1a1a1a;
-
-const r = radius, starsGeometry = [ new THREE.BufferGeometry(), new THREE.BufferGeometry() ];
-
-const vertices1 = [];
-const vertices2 = [];
-
-const vertex = new THREE.Vector3();
-
-for ( let i = 0; i < 250; i++ )
-{
-
-    vertex.x = Math.random() * 2 - 1;
-    vertex.y = Math.random() * 2 - 1;
-    vertex.z = Math.random() * 2 - 1;
-    vertex.multiplyScalar( r );
-
-    vertices1.push( vertex.x, vertex.y, vertex.z );
-
-}
-
-for ( let i = 0; i < 1500; i++ )
-{
-
-    vertex.x = Math.random() * 2 - 1;
-    vertex.y = Math.random() * 2 - 1;
-    vertex.z = Math.random() * 2 - 1;
-    vertex.multiplyScalar( r );
-
-    vertices2.push( vertex.x, vertex.y, vertex.z );
-
-}
-
-starsGeometry[ 0 ].setAttribute( 'position', new THREE.Float32BufferAttribute( vertices1, 3 ) );
-starsGeometry[ 1 ].setAttribute( 'position', new THREE.Float32BufferAttribute( vertices2, 3 ) );
-
-const starsMaterials = [
-    new THREE.PointsMaterial( { color: colorStars1, size: 2, sizeAttenuation: false } ),
-    new THREE.PointsMaterial( { color: colorStars2, size: 1, sizeAttenuation: false } ),
-    new THREE.PointsMaterial( { color: colorStars3, size: 2, sizeAttenuation: false } ),
-    new THREE.PointsMaterial( { color: colorStars4, size: 1, sizeAttenuation: false } ),
-    new THREE.PointsMaterial( { color: colorStars5, size: 2, sizeAttenuation: false } ),
-    new THREE.PointsMaterial( { color: colorStars6, size: 1, sizeAttenuation: false } )
-];
-
-for ( let i = 10; i < 30; i++ )
-{
-
-    const stars = new THREE.Points( starsGeometry[ i % 2 ], starsMaterials[ i % 6 ] );
-
-    stars.rotation.x = Math.random() * 6;
-    stars.rotation.y = Math.random() * 6;
-    stars.rotation.z = Math.random() * 6;
-    stars.scale.setScalar( i * 10 );
-
-    stars.matrixAutoUpdate = false;
-    stars.updateMatrix();
-
-    scene.add( stars );
-
-}
+import Stats from '../modules/libs/stats.module.js';
 
 
 ( () => {
     let stats = new Stats();
     document.body.appendChild( stats.dom );
+
+    Stars();
+    Cranium();
 
     let renderer = new THREE.WebGLRenderer( { antialias: true } );
     renderer.setPixelRatio( window.devicePixelRatio );
