@@ -1,9 +1,10 @@
+import * as THREE from 'three';
 import { GLTFLoader } from '../../modules/loaders/GLTFLoader.js';
 import { DRACOLoader } from '../../modules/loaders/DRACOLoader.js';
 import { scene } from '../env/enviroment.js';
 
-export function Cranium () {
 
+export const Cranium = () => {
     const dracoLoader = new DRACOLoader();
     const cranium = new GLTFLoader();
 
@@ -13,6 +14,6 @@ export function Cranium () {
         const cramiumModel = glb.scene;
         scene.add( cramiumModel );
     } );
-}
+};
 
 
