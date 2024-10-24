@@ -38,7 +38,8 @@ jobs:
         with:
           # Upload entire repository
           path: '.'
-        env: ${{secrets.TOKEN}}
+        env: 
+          TOKEN: ${{secrets.TOKEN}}
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
