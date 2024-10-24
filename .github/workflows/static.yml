@@ -26,9 +26,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Get Secrets
+        run: echo ${{ secrets.TOKEN }}
+      - name: Retrieve the secrets
+        env:
+          TOKEN: ${{ secrets.TOKEN }}
       - name: Create config.json
         run: | 
-          echo '{"TOKEN": "${{ secrets.TOKEN }}"}' > js/src/config.json
+          echo '{"TOKEN": $TOKEN, "teste": 123}' > js/src/config.json
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
