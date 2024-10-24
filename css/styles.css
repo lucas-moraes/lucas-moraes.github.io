@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, sans-serif;
+  font-optical-sizing: auto;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+section {
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+aside {
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  background-color: #e7eef2;
+}
+
+.title {
+  font-family: system-ui, sans-serif;
+  font-optical-sizing: auto;
+  font-size: 40px;
+  font-weight: 800;
+  font-style: normal;
+  letter-spacing: -1.5px;
+  color: #05002d;
+  text-shadow: 0 0 2px #0000009e;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-1 {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+#a {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 200px;
+  border-radius: 10px;
+  background-color: #e7eef2;
+}
+
+#b {
+  order: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  width: 145px;
+  height: 300px;
+  background-color: #e7eef2;
+  border-radius: 10px;
+}
+
+#c {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+  height: 80px;
+  background-color: #e7eef2;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.profile {
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.subtitle {
+  font-family: system-ui, sans-serif;
+  font-optical-sizing: auto;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: normal;
+  color: #05002d;
+  text-shadow: 0 0 2px #0000009e;
+}
+
+#d {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 535px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #e7eef2;
+}
+
+.container-2 {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.skill-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skill-container-list {
+  display: flex;
+  flex-direction: row;
+  gap: 45px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  font-family: system-ui, sans-serif;
+  font-optical-sizing: auto;
+  font-size: 25px;
+  font-weight: 700;
+  font-style: normal;
+  background: #ab00fa;
+  background: linear-gradient(to top left,
+      #ab00fa 0%,
+      #ff10f3 24%,
+      #c32aff 47%,
+      #ff48ea 68%,
+      #c12db0 88%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
