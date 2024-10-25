@@ -26,14 +26,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Remove existing config.json (if exists)
-        run: |
-          if [ -f js/src/config.json ]; then
-            rm js/src/config.json
-          fi
-      - name: Create config.json
-        run: | 
-          echo '{"TOKEN": "${{secrets.TOKEN}}", "teste": 123}' > js/src/config.json
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
