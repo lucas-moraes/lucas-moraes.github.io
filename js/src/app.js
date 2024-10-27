@@ -4,6 +4,7 @@ import { linkedin } from "./renders/linkedin.js";
 import { macbook } from "./renders/macbook.js";
 import { whatsapp } from "./renders/whatsapp.js";
 import { GetRepos } from "./services/getRepos.js";
+import { Tools } from "./utils/tools.js";
 
 (() => {
   face();
@@ -11,9 +12,7 @@ import { GetRepos } from "./services/getRepos.js";
   linkedin();
   macbook();
   whatsapp();
-
-  const year = new Date().getFullYear() - 2020;
-  document.getElementById("yearExperience").innerHTML = `${year} anos`;
+  Tools();
 
   GetRepos();
 })();
