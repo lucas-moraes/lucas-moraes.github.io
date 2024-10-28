@@ -30,7 +30,6 @@ section {
   font-style: normal;
   letter-spacing: -1.5px;
   color: #05002d;
-  text-shadow: 0 0 2px #0000009e;
 }
 
 .title-container {
@@ -107,7 +106,6 @@ section {
   font-weight: 400;
   font-style: normal;
   color: #05002d;
-  text-shadow: 0 0 2px #0000009e;
 }
 
 #d {
@@ -203,7 +201,6 @@ li {
   font-weight: 700;
   font-style: normal;
   color: #414141;
-  text-shadow: 0 0 2px #0000009e;
 }
 
 #whatzator-open-close {
@@ -232,4 +229,53 @@ li {
 
 .explanation {
   margin-top: 7px;
+}
+
+@media only screen and (max-width: 320px) {
+  body {
+    transform: scale(0.75);
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  body {
+    transform: scale(0.87);
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .container-1 {
+    flex-direction: column;
+  }
+
+  #b {
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: space-around;
+    padding: 10px 0px;
+  }
+
+  #d {
+    width: 100%;
+    gap: 5px;
+    padding: 15px 0px;
+  }
+
+  #e {
+    width: 100%;
+    padding: 15px 0px;
+  }
+
+  li {
+    font-size: 18px;
+  }
+
+  .subtitle {
+    margin: 0 10px;
+  }
+
+  .flex-row {
+    margin: 0 10px;
+  }
 }
