@@ -231,6 +231,16 @@ li {
   margin-top: 7px;
 }
 
+.explanation>a {
+  color: #05002d;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #a614cf;
+    color: #f3f3f3;
+  }
+}
+
 @media only screen and (max-width: 320px) {
   body {
     transform: scale(0.75);
