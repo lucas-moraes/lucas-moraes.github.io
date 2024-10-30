@@ -27,6 +27,8 @@ export const face = () => {
   const loader = new GLTFLoader();
   loader.setDRACOLoader(dracoLoader);
 
+  const loaderElement = document.querySelector("#face .loader");
+
   let objModel;
   loader.load("./js/src/models/face.glb", (gltf) => {
     objModel = gltf.scene;
@@ -34,6 +36,10 @@ export const face = () => {
     objModel.rotation.set(0, 0.5, 0);
     objModel.scale.set(10, 10, 10);
     scene.add(objModel);
+
+    if (loaderElement) {
+      loaderElement.remove();
+    }
   });
 
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });

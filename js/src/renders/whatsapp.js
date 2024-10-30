@@ -49,11 +49,17 @@ export const whatsapp = () => {
   const loader = new GLTFLoader();
   loader.setDRACOLoader(dracoLoader);
 
+  const loaderElement = document.querySelector("#whatsapp .loader");
+
   let objModel;
   loader.load("./js/src/models/whatsapp.glb", (gltf) => {
     objModel = gltf.scene;
     objModel.position.set(0, 0, 0);
     scene.add(objModel);
+
+    if (loaderElement) {
+      loaderElement.remove();
+    }
   });
 
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
