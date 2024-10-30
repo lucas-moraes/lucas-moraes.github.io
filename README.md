@@ -1,16 +1,32 @@
-### Hi there 👋
+# lucas-moraes.github.io
 
-<!--
-**lucas-moraes/lucas-moraes** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## Descrição
 
-Here are some ideas to get you started:
+Este repositório contém o código-fonte para o meu portfólio pessoal, hospedado no GitHub Pages. O site apresenta meus projetos, habilidades e informações de contato, servindo como uma plataforma central para demonstrar meu trabalho como desenvolvedor.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Tecnologias Utilizadas
+
+- HTML
+- CSS
+- JavaScript
+- Three.js
+
+## Funcionalidades
+
+- Apresentação visual dos projetos
+- Animações 3D com Three.js
+- Links para contato e redes sociais
+
+## Instalação
+
+Para clonar e visualizar este projeto localmente, siga os passos abaixo:
+
+```bash
+git clone https://github.com/lucas-moraes/lucas-moraes.github.io.git
+cd lucas-moraes.github.io
+# Abra o arquivo index.html em um navegador de sua escolha
+```
+
+## Licença
+
+Este projeto é licenciado sob a licença MIT, os modelos 3d estão licenciados para uso pessoal e não comercial.
