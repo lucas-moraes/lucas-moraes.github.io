@@ -10,7 +10,7 @@
   </head>
   <body class="dark-gradient">
     <div style="max-width: 768px; width: 100%">
-      <div class="main" style="display: flex; flex-direction: column; gap: 16px">
+      <header>
         <div style="display: flex; align-items: center; justify-content: space-between">
           <h1 class="title">lucas moraes</h1>
           <span id="button-sun" style="font-size: 25px; cursor: pointer">🌞</span>
@@ -27,32 +27,29 @@
             <img src="./assets/gh.svg" width="50" />
           </a>
         </div>
-      </div>
-      <div class="main" style="margin-top: 32px; position: relative">
-        <div style="position: absolute; top: -2px; left: 50px; display: flex; gap: 16px">
+      </header>
+      <main>
+        <article class="first-label-stacks">
           <div class="node" style="color: #ff8f00">Git</div>
           <div class="node" style="color: #ff8f00">AWS</div>
           <div class="node" style="color: #ff8f00">Docker</div>
           <div class="node" style="color: #ff8f00">Azure</div>
-        </div>
-        <div
-          style="
-            display: flex;
-            flex-wrap: wrap;
-            padding: 52px 32px;
-            border: 2px #ff8f00;
-            border-style: dashed;
-            width: fit-content;
-          "
-        >
-          <svg
-            viewBox="0 0  100% 100%"
-            preserveAspectRatio="none"
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; padding: 21px"
-          >
-            <path class="flow-line" d="M0,0 H190" stroke="#009fff" stroke-width="2" fill="none"></path>
+        </article>
+        <article class="second-label-stacks">
+          <svg viewBox="0 0  100 100" preserveAspectRatio="none" class="graph-first-label">
+            <rect
+              class="flow-line"
+              x="0"
+              y="0"
+              width="100"
+              height="95"
+              fill="none"
+              stroke="#ff8f00"
+              stroke-width="4"
+              vector-effect="non-scaling-stroke"
+            />
           </svg>
-          <div class="flow" style="align-items: flex-start">
+          <div class="flow">
             <div>
               <div class="node" style="color: #009fff">Front-end</div>
               <svg viewBox="0 0 100 250" preserveAspectRatio="none">
@@ -136,8 +133,8 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </article>
+      </main>
     </div>
     <script>
       const buttonSun = document.getElementById("button-sun");

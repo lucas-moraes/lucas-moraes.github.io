@@ -8,7 +8,7 @@ html {
 body {
   height: 100%;
   margin: 0;
-  padding: 0;
+  padding: 10px;
   font-family: Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -webkit-font-smoothing: subpixel-antialiased;
@@ -33,8 +33,43 @@ a {
   color: inherit;
 }
 
-.main {
+header {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+main {
   padding: 20px;
+  margin-top: 32px;
+  position: relative;
+}
+
+.first-label-stacks {
+  position: absolute;
+  top: -2px;
+  left: 18px;
+  display: flex;
+  gap: 16px;
+  z-index: 2;
+}
+
+.second-label-stacks {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 20px 20px 20px;
+  border: 2px #ff8f00;
+  width: fit-content;
+}
+
+.graph-first-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 21px 0 0 0;
 }
 
 @keyframes gradientAnimation {
@@ -56,7 +91,7 @@ a {
   font-size: 60px;
   font-weight: 900;
   line-height: 1;
-  background: linear-gradient(to top left, #a614cf 10%, #ff0ecb 30%, #a614cf 60%, #ff0ecb 90%);
+  background: linear-gradient(to top left, #ff7200 10%, #ffd700 30%, #ff7200 60%, #ffd700 90%);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -74,6 +109,7 @@ a {
   display: flex;
   align-items: center;
   font-family: sans-serif;
+  align-items: flex-start;
 }
 
 .node {
