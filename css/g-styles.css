@@ -3,25 +3,31 @@ html {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  scroll-behavior: smooth;
+
+  @media screen and (max-width: 425px) {
+    zoom: 0.7;
+  }
 }
 
 body {
   height: 100%;
   margin: 0;
-  padding: 10px;
-  font-family: Arial, sans-serif;
+  padding: 15px;
+  color: #434343;
+  font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -webkit-font-smoothing: subpixel-antialiased;
   text-rendering: optimizeLegibility;
   overflow: auto;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   transition: background 2s ease-in-out;
 }
 
 h1 {
   margin: 0;
-  text-transform: uppercase;
 }
 
 h2 {
@@ -40,10 +46,20 @@ header {
   gap: 16px;
 }
 
-main {
-  padding: 20px;
-  margin-top: 32px;
+.contacts {
+  display: flex;
+  justify-content: center;
+  height: 100px;
   position: relative;
+  align-self: center;
+  width: 300px;
+}
+
+main {
+  margin: 62px 0px;
+  position: relative;
+  max-width: 768px;
+  width: 100%;
 }
 
 .first-label-stacks {
@@ -58,7 +74,7 @@ main {
 .second-label-stacks {
   display: flex;
   flex-wrap: wrap;
-  padding: 50px 20px 20px 20px;
+  padding: 64px 24px 8px 56px;
   border: 2px #ff8f00;
   width: fit-content;
 }
@@ -72,37 +88,38 @@ main {
   padding: 21px 0 0 0;
 }
 
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
 }
 
 .title {
   font-family: system-ui, sans-serif;
-  font-size: 60px;
-  font-weight: 900;
+  font-size: 56px;
+  font-weight: 700;
   line-height: 1;
-  background: linear-gradient(to top left, #ff7200 10%, #ffd700 30%, #ff7200 60%, #ffd700 90%);
+  background: linear-gradient(to top left, #004fff 10%, #0070ff 30%, #004fff 60%, #179fff 90%);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
-  animation: gradientAnimation 5s ease infinite;
+  letter-spacing: -3px;
 }
 
 .subtitle {
-  font-size: 30px;
-  color: #ffffff73;
+  font-size: 24px;
+  color: #434343;
+  padding: 0 4px;
+  font-weight: 500;
+}
+
+.text {
+  font-size: 16px;
+  padding: 0 6px;
+  font-weight: 500;
 }
 
 .flow {
@@ -114,7 +131,7 @@ main {
 
 .node {
   padding: 8px 16px;
-  background: #17001e;
+  background: #ffffff;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-size: 20px;
@@ -145,4 +162,15 @@ main {
   to {
     stroke-dashoffset: -16;
   }
+}
+
+.icon-link {
+  display: inline-block;
+  transition: transform 0.5s;
+  position: absolute;
+}
+
+.icon-link:hover {
+  cursor: pointer;
+  transform: scale(1.2);
 }
