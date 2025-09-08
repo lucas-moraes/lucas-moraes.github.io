@@ -141,6 +141,7 @@ main {
   color: #434343;
   padding: 0 4px;
   font-weight: 500;
+  position: static;
 
   @media screen and (max-width: 425px) {
     font-size: 18px;
