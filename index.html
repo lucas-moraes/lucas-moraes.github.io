@@ -19,31 +19,31 @@
     <link rel="manifest" href="./site.webmanifest" />
   </head>
   <body class="light-gradient">
-      <header>
-        <div class="title-container">
-          <div>
-            <h1 class="title">Lucas Moraes &nbsp;</h1>
-            <h2 class="subtitle">Desenvolvedor fullstack</h2>
-            <h2 class="text">
-              ⭐
-              <span id="exp"></span>
-              anos de experiência
-            </h2>
-          </div>
-          <img class="img-computer" src="./assets/computer.png" width="100" />
+    <header>
+      <div class="title-container">
+        <div>
+          <h1 class="title">Lucas Moraes &nbsp;</h1>
+          <h2 class="subtitle">Desenvolvedor fullstack</h2>
+          <h2 class="text">
+            ⭐
+            <span id="exp"></span>
+            anos de experiência
+          </h2>
         </div>
-        <div class="contacts">
-          <a target="_blank" href="https://wa.me/5511959402088">
-            <img class="icon-link" src="./assets/wa.png" width="100" style="left: 20px" />
-          </a>
-          <a target="_blank" href="https://www.linkedin.com/in/lucas-moraes-silva">
-            <img class="icon-link" src="./assets/lk.png" width="100" style="left: 90px" />
-          </a>
-          <a target="_blank" href="https://github.com/lucas-moraes">
-            <img class="icon-link" src="./assets/gh.png" width="100" style="right: 40px" />
-          </a>
-        </div>
-      </header>
+        <img class="img-computer" src="./assets/computer.png" width="100" />
+      </div>
+      <div class="contacts">
+        <a target="_blank" href="https://wa.me/5511959402088">
+          <img class="icon-link" src="./assets/wa.png" width="100" style="left: 20px" />
+        </a>
+        <a target="_blank" href="https://www.linkedin.com/in/lucas-moraes-silva">
+          <img class="icon-link" src="./assets/lk.png" width="100" style="left: 90px" />
+        </a>
+        <a target="_blank" href="https://github.com/lucas-moraes">
+          <img class="icon-link" src="./assets/gh.png" width="100" style="right: 40px" />
+        </a>
+      </div>
+    </header>
     <main>
       <section>
         <article class="first-label-stacks">
@@ -155,7 +155,52 @@
             </div>
           </div>
         </article>
-      </main>
+      </section>
+      <section style="margin-top: 60px">
+        <h2 class="section-title">Projetos</h2>
+        <div class="list-projects">
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-title">Whatzator</span>
+              <div class="list-badges">
+                <span class="badge">HTML</span>
+                <span class="badge">JavaScript</span>
+                <span class="badge">CSS</span>
+              </div>
+
+              <span class="slim">Extensão para navegador chrome</span>
+            </div>
+            <span class="project-description">
+              Permite iniciar conversas no WhatsApp Web sem a necessidade de salvar o número na lista de contatos.
+              Desenvolvida utilizando html, css e javascript, a extensão oferece uma interface intuitiva e fácil de
+              usar, permitindo que os usuários enviem mensagens rapidamente para qualquer número de telefone.
+            </span>
+            <a
+              target="_blank"
+              href="https://chromewebstore.google.com/detail/whatzator/ldlmpgdlcncbagllppnhbhhapcfcbjhl"
+            >
+              - Acessar
+            </a>
+          </div>
+          <div class="project-card">
+            <div class="project-header">
+              <span class="project-title">PJtizator</span>
+              <div class="list-badges">
+                <span class="badge">Rust</span>
+                <span class="badge">Leptos</span>
+                <span class="badge">JavaScript</span>
+                <span class="badge">CSS</span>
+              </div>
+              <span class="slim">Site calculadora CLT x PJ</span>
+            </div>
+            <span class="project-description">
+              Simulador comparativo entre contratos CLT e PJ para prestadores de serviços de TI.
+            </span>
+            <a target="_blank" href="https://lucas-moraes.github.io/pjtizator/">- Acessar</a>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
   <script>
     const startYear = 2020;

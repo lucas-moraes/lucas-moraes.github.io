@@ -72,6 +72,10 @@ main {
   }
 }
 
+section {
+  position: relative;
+}
+
 .first-label-stacks {
   position: absolute;
   top: -2px;
@@ -253,4 +257,95 @@ main {
     gap: 10px;
     margin-top: 5px;
   }
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+
+  @media screen and (max-width: 425px) {
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+}
+
+.project-header {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-bottom: 4px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-image: linear-gradient(to right, #ff652a 10%, #ff9900 5%, #9932cc26) 1;
+
+  @media screen and (max-width: 425px) {
+    flex-direction: column;
+    gap: 0px;
+    margin-bottom: 8px;
+  }
+}
+
+.project-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  background: linear-gradient(to top left, #ff652a 58%, #ff9900 65%, #ff652a 76%, #ff9900 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+  @media screen and (max-width: 425px) {
+    font-size: 18px;
+  }
+}
+
+.slim {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media screen and (max-width: 425px) {
+    font-size: 15px;
+  }
+}
+
+.project-description {
+  font-size: 16px;
+  margin-top: 10px;
+
+  @media screen and (max-width: 425px) {
+    display: flex;
+    text-align: justify;
+    font-size: 13px;
+  }
+}
+
+.list-projects {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.list-badges {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.badge {
+  padding: 2px 5px;
+  background-color: #ff9900;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  height: fit-content;
+  width: fit-content;
 }
