@@ -177,7 +177,7 @@ section {
   font-size: 20px;
   font-weight: 500;
   border-radius: 9px;
-  border-width: 2px;
+  border-width: 3px;
   border-style: double;
 
   @media screen and (max-width: 425px) {
@@ -348,4 +348,10 @@ section {
   font-weight: 600;
   height: fit-content;
   width: fit-content;
+}
+
+.link {
+  color: #ff652a;
+  font-weight: 600;
+  text-decoration: underline;
 }
