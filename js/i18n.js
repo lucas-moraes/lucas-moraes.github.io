@@ -1,4 +1,4 @@
-import { translations } from "./translations.js";
+import { translations } from "./translations.min.js";
 
 const DEFAULT_LANG = "br";
 const buttonTititle = document.getElementById("i18n-button-text");

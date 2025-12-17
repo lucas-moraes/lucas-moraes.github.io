@@ -50,22 +50,36 @@ jobs:
           fi
 
       # Minificar JS (se existir)
-      - name: Minify JS folder
+      - name: Minify JS files in dist/js
         run: |
-          if [ -d "js" ]; then
-            mkdir -p dist/js
-            for file in js/*.js; do
-              terser "$file" -c -m -o "dist/$file"
-            done
+          if [ -d "dist/js" ]; then
+           echo "Minifying JavaScript files in dist/js..."
+     
+           find dist/js -maxdepth 1 -name "*.js" | while read original_file; do
+             if [ -f "$original_file" ]; then
+               output_file="${original_file/.js/.min.js}"
+               echo "Processing: $original_file -> $output_file"
+               terser "$original_file" -c -m -o "$output_file"
+             if [ $? -eq 0 ]; then
+               rm "$original_file"
+               echo "Original file removed: $original_file"
+             else
+               echo "❌ Error minifying $original_file."
+             exit 1 
+           fi
+          fi
+          done
+           echo "Minification step complete."
+          else
+           echo "A pasta dist/js não existe. Pulando minificação JS."
           fi
 
       - name: Update index.html references
         run: |
           if [ -f dist/index.html ]; then
-            # CSS
             sed -i 's|css/\(.*\).css|css/\1.min.css|g' dist/index.html
-            # JS
-            sed -i 's|js/\(.*\).js|js/\1.min.js|g' dist/index.html
+            sed -i 's|\.\/\(.*\).js|\.\/\1.min.js|g' dist/index.html
+            echo "index.html references updated to use .min.js"
           fi
 
       # Subir artefato
