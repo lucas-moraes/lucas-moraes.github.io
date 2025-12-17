@@ -9,14 +9,9 @@
       name="description"
       content="Descrição clara e objetiva do seu site, incluindo palavras-chave relevantes. Máximo de 160 caracteres."
     />
-
     <meta name="keywords" content="fullstack, developer, nodejs, typescript, javascript" />
-
     <meta name="robots" content="index, follow" />
-
     <meta name="author" content="Lucas Moraes" />
-
-    <link rel="canonical" href="https://lucas-moraes.github.io/" />
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://lucas-moraes.github.io/" />
@@ -31,7 +26,6 @@
     />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://lucas-moraes.github.io/" />
     <meta name="twitter:title" content="Lucas Moraes | Desenvolvedor de softwre" />
@@ -40,11 +34,11 @@
       name="twitter:image"
       content="https://github.com/user-attachments/assets/2aa6de7c-a227-45f7-98a3-938db35c46fe"
     />
-
     <link rel="stylesheet" href="./css/g-styles.css" />
     <link rel="stylesheet" href="./css/bg-light.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="canonical" href="https://lucas-moraes.github.io/" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
@@ -59,14 +53,20 @@
       <div class="title-container">
         <div>
           <h1 class="title">Lucas Moraes &nbsp;</h1>
-          <h2 class="subtitle">Desenvolvedor fullstack</h2>
+          <h2 class="subtitle" data-i18n-key="professional-title">...</h2>
           <h2 class="text">
             ⭐
             <span id="exp"></span>
-            anos de experiência
+            <span data-i18n-key="professional-experience"></span>
           </h2>
         </div>
-        <img class="img-computer" src="./assets/computer.png" width="100" />
+        <div class="header-right">
+          <img class="img-computer" src="./assets/computer.png" width="100" />
+          <button id="lang-select" class="btn-i18n">
+            <img id="globe-icon" src="./assets/globe-mono.svg" alt="img_globe" />
+            <span id="i18n-button-text">...</span>
+          </button>
+        </div>
       </div>
       <div class="contacts">
         <a target="_blank" href="https://wa.me/5511959402088">
@@ -194,7 +194,7 @@
         </article>
       </section>
       <section style="margin-top: 60px">
-        <h2 class="section-title">Projetos</h2>
+        <h2 class="section-title" data-i18n-key="title-projects">...</h2>
         <div class="list-projects">
           <div class="project-card">
             <div class="project-header">
@@ -204,20 +204,16 @@
                 <span class="badge">JavaScript</span>
                 <span class="badge">CSS</span>
               </div>
-
-              <span class="slim">Extensão para navegador chrome</span>
+              <span class="slim" data-i18n-key="project-type-whatzator">...</span>
             </div>
-            <span class="project-description">
-              Permite iniciar conversas no WhatsApp Web sem a necessidade de salvar o número na lista de contatos.
-              Desenvolvida utilizando html, css e javascript, a extensão oferece uma interface intuitiva e fácil de
-              usar, permitindo que os usuários enviem mensagens rapidamente para qualquer número de telefone. -
-            </span>
+            <span class="project-description" data-i18n-key="project-description-whatzator">...</span>
             <a
-              target="_blank"
               class="link"
               href="https://chromewebstore.google.com/detail/whatzator/ldlmpgdlcncbagllppnhbhhapcfcbjhl"
+              target="_blank"
+              data-i18n-key="button-text-access"
             >
-              Acessar
+              ...
             </a>
           </div>
           <div class="project-card">
@@ -229,12 +225,17 @@
                 <span class="badge">JavaScript</span>
                 <span class="badge">CSS</span>
               </div>
-              <span class="slim">Site calculadora CLT x PJ</span>
+              <span class="slim" data-i18n-key="project-type-pjtizator">...</span>
             </div>
-            <span class="project-description">
-              Simulador comparativo entre contratos CLT e PJ para prestadores de serviços de TI. -
-            </span>
-            <a target="_blank" class="link" href="https://lucas-moraes.github.io/pjtizator/">Acessar</a>
+            <span class="project-description" data-i18n-key="project-description-pjtizator">...</span>
+            <a
+              class="link"
+              href="https://lucas-moraes.github.io/pjtizator/"
+              target="_blank"
+              data-i18n-key="button-text-access"
+            >
+              ...
+            </a>
           </div>
           <div class="project-card">
             <div class="project-header">
@@ -246,22 +247,41 @@
                 <span class="badge">Markdown</span>
               </div>
 
-              <span class="slim">Textos para fixar conhecimentos</span>
+              <span class="slim" data-i18n-key="project-type-articles">...</span>
             </div>
-            <span class="project-description">
-              Site dedicado a compartilhar textos técnicos e resumos sobre diversas tecnologias e conceitos de
-              desenvolvimento. -
-            </span>
-            <a target="_self" class="link" href="https://lucas-moraes.github.io/articles/">Acessar</a>
+            <span class="project-description" data-i18n-key="project-description-articles">...</span>
+            <a
+              class="link"
+              href="https://lucas-moraes.github.io/articles/"
+              target="_self"
+              data-i18n-key="button-text-access"
+            >
+              ...
+            </a>
           </div>
         </div>
       </section>
     </main>
   </body>
+  <script type="module" src="./js/i18n.js"></script>
   <script>
     const startYear = 2020;
     const currentYear = new Date().getFullYear();
     const experience = currentYear - startYear;
     document.getElementById("exp").textContent = experience;
+
+    const langButton = document.getElementById("lang-select");
+    const globeImg = document.getElementById("globe-icon");
+
+    const originalIcon = "./assets/globe-mono.svg";
+    const hoverIcon = "./assets/globe-color.svg";
+
+    langButton.addEventListener("mouseenter", () => {
+      globeImg.src = hoverIcon;
+    });
+
+    langButton.addEventListener("mouseleave", () => {
+      globeImg.src = originalIcon;
+    });
   </script>
 </html>
