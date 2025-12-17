@@ -357,3 +357,40 @@ section {
   font-weight: 600;
   text-decoration: underline;
 }
+
+.header-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#lang-select {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  appearance: none;
+  border: none;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  zoom: 0.7;
+  width: 60px;
+  height: 65px;
+}
+
+#i18n-button-text {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 425px) {
+  #lang-select {
+    position: relative;
+    top: auto;
+    right: auto;
+    zoom: 0.6;
+  }
+}
