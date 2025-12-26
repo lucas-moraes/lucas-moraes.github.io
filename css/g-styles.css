@@ -179,8 +179,8 @@ section {
   font-size: 20px;
   font-weight: 500;
   border-radius: 9px;
-  border-width: 3px;
-  border-style: double;
+  border-width: 2px;
+  border-style: solid;
 
   @media screen and (max-width: 425px) {
     font-size: 14px;
