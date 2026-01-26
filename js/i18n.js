@@ -1,6 +1,6 @@
-import { translations } from "./translations.min.js";
+import { translations } from "./translations.js";
 
-const DEFAULT_LANG = "br";
+const DEFAULT_LANG = "en";
 const buttonTititle = document.getElementById("i18n-button-text");
 
 let currentLang = window.localStorage.getItem("lang") ?? DEFAULT_LANG;
@@ -30,7 +30,7 @@ function SetLang(lang) {
 document.addEventListener("DOMContentLoaded", () => {
   SetLang(currentLang);
 
-  document.getElementById("lang-select").addEventListener("click", () => {
+  document.getElementById("i18n-button-text").addEventListener("click", () => {
     const newLang = currentLang === "en" ? "br" : "en";
     SetLang(newLang);
   });
