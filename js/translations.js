@@ -1,8 +1,7 @@
 export const translations = {
   en: {
-    "professional-title": "Full Stack Developer",
     "professional-experience": "years of experience",
-    "title-projects": "Projects",
+    "title-projects": "PROJECTS",
     "button-text-access": "Access",
     "project-type-whatzator": "Chrome browser extension",
     "project-description-whatzator":
@@ -17,9 +16,8 @@ export const translations = {
       "Website dedicated to sharing technical texts and summaries on various technologies and development concepts.",
   },
   br: {
-    "professional-title": "Desenvolvedor Full Stack",
     "professional-experience": "anos de experiência",
-    "title-projects": "Projetos",
+    "title-projects": "PROJETOS",
     "button-text-access": "Acessar",
     "project-type-whatzator": "Extensão para navegador chrome",
     "project-description-whatzator":
