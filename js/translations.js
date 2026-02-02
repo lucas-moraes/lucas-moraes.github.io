@@ -11,6 +11,9 @@ export const translations = {
     "project-type-neovim": "Terminal code editor",
     "project-description-neovim":
       "Text editor configured for software development, focusing on productivity and efficiency, using various programming languages.",
+    "project-type-term-exp": "Terminal file explorer",
+    "project-description-term-exp":
+      "File explorer developed for terminal use, allowing efficient navigation and manipulation of files and directories using command-line commands.",
     "project-type-articles": "Texts to reinforce knowledge",
     "project-description-articles":
       "Website dedicated to sharing technical texts and summaries on various technologies and development concepts.",
@@ -28,6 +31,9 @@ export const translations = {
     "project-type-neovim": "Editor de código via terminal",
     "project-description-neovim":
       "Editor de texto configurado para desenvolvimento de software, com foco em produtividade e eficiência, utilizando diversas linguagens de programação.",
+    "project-type-term-exp": "Explorador de arquivos via terminal",
+    "project-description-term-exp":
+      "Explorador de arquivos desenvolvido para uso via terminal, permitindo navegação e manipulação eficiente de arquivos e diretórios utilizando comandos de linha de comando.",
     "project-type-articles": "Textos para fixar conhecimentos",
     "project-description-articles":
       "Site dedicado a compartilhar textos técnicos e resumos sobre diversas tecnologias e conceitos de desenvolvimento.",
