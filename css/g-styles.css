@@ -277,6 +277,26 @@ main {
   font-family: sans-serif;
 }
 
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-content {
+  display: inline-block;
+  animation: marquee 55s linear infinite;
+  font-size: 100px;
+  font-weight: 600;
+  font-family: sans-serif;
+  color: #080808;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 .links {
   font-size: 49px;
   font-family: sans-serif;
