@@ -66,6 +66,7 @@ main {
   padding: 0 22px 0 0;
   height: 100%;
   position: relative;
+  background-color: #40e0d0;
 
   @media screen and (max-width: 500px) {
     width: 100%;
