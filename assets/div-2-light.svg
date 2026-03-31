@@ -1,0 +1,4 @@
+<!-- assets/pattern.svg -->
+<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" fill="var(--svg-div-2-color-1)">
+  <path d="M0 40 40 0H20L0 20m40 20V20L20 40" fill="#0bfe00" fill-rule="evenodd"/>
+</svg>
